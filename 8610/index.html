@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8"/>
+    <title>华三日志SN码过滤</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- https://purecss.io/start/ -->
+    <link rel="stylesheet" href="./Public/pure-min.css" type="text/css" /> 
+    <link rel="stylesheet" href="./Public/dcc.css" type="text/css" /> 
+
+    <script type="text/javascript" src="./Public/jquery-3.3.1.min.js"></script>
+    <!-- <script type="text/javascript" src="./Public/jquery-2.2.4.min.js"></script> -->
+
+    <script type="text/javascript" src="./Public/clipboard.min.js"></script>
+    <!-- <script type="text/javascript" src="./Public/jquery.zclip.min.js"></script> -->
+
+    <script type="text/javascript" src="./Public/dcc.js"></script>
+
+    <style type="text/css"> 
+     
+    </style> 
+</head>
+<body>
+    <pre id="ceshi"></pre>
+    <div id="swname"></div><br />
+    <pre id="sysn" class=""></pre>
+    <div>
+        <div id="sw1sn"></div>
+        <pre id="sw1" class=""></pre>
+    </div>
+    <div>
+        <div id="sw2sn"></div>
+        <pre id="sw2" class=""></pre>
+    </div>
+   
+    <div>
+        <p>端口SN码</p>
+        <div id="snall"></div>
+        <!-- Slot 1 -->
+        <p id="port1"></p>
+        <pre id="port1sn" class=""></pre>
+        <p id="port2"></p>
+        <pre id="port2sn" class=""></pre>
+        
+        <!-- Slot 2 -->
+        
+        <p id="port3"></p>
+        <pre id="port3sn" class=""></pre>
+        <p id="port4"></p>
+        <pre id="port4sn" class=""></pre>
+    </div>
+
+<div id="center">
+  <p>SN码收集 暂时只支持h3c s6800 兼容单机和双机IRF</p>
+  <button class="pure-button" onclick="location.reload();">清空数据</button>
+  <button class="pure-button" onclick="dcc()">生成SN码数据</button>
+ 
+      <textarea class="pure-input-1-2" placeholder="粘贴日志内容到文本框" id="log"></textarea>
+</div>
+
+
+
+<!-- 1. Define some markup -->
+
+
+
+
+
+<!-- 3. Instantiate clipboard by passing a string selector -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+    function set() {
+        $("#set").toggle();
+    }
+</script>
+
+
+</body>

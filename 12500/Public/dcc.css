@@ -1,0 +1,32 @@
+/**********************
+ 自定义样式 
+ ********************/
+
+
+#center{
+    text-align:center;
+}
+#log{
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+}
+#ceshi{
+    font-size: 150%
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-small {
+    font-size: 85%;
+}
+
+.button-large {
+    font-size: 110%;
+}
+
+.button-xlarge {
+    font-size: 125%;
+}
